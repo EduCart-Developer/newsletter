@@ -5,27 +5,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .newsletter-main-container{
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:500px; 
+            padding: 4%;
+            background-image: url('https://i.ibb.co/Jr3X8rQ/Websiteaaa-01.jpg');
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+
+        }
+        .newsletter-inner-container{
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.527);
+            width: 100%;
+            padding:5% 1% 1% 1%;
+            border-radius: 7%;
+            overflow: hidden;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color:#b11519 ;
+        }
+        .header-image{
+            width: 98%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #sib-form{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5% 5% 0px 5%;
+          
+        }
+        .input-email-field{
+            height:35px;
+            width: 75%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 3px 2px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            outline: none;
+            border: 1px solid grey;
+            color: grey;
+            border: none; 
+        }
+        .input-email-field::placeholder {
+            color: rgb(216, 216, 216);
+            opacity: 1;
+            font-weight: 500;
+        }
+        .input-email-field::-ms-input-placeholder {
+            color: rgb(216, 216, 216);
+            font-weight: 500;
+        }
+        .newsletter-submit-button{
+            margin-left: 10px;
+            color: aliceblue;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 32px;
+            padding: 5px 20px;
+            border-radius:5px;
+            cursor:pointer;
+            letter-spacing: 1px;
+            border: none;
+        }
+        .newsletter-bottom-image{
+            width: 100%;
+        }
+        .bottom-image{
+           width: 100%;
+        }
+        /* mobile view */
+        @media only screen and (max-width: 479px) {
+            .newsletter-main-container{
+            min-width: 300px;
+            width:100%;
+          }
+        .newsletter-inner-container{
+            width: 95%;
+            border-radius: 2%; 
+        }
+        .header-image{
+            width: 90%;
+        }
+        #sib-form{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5% 5% 0px 5%;
+          
+        }
+        .input-email-field{
+            height:28px; 
+            font-size: 14px; 
+            width: 100%;
+        }
+        .newsletter-submit-button{   
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+        }
+        }
+     
+    </style>
 </head>
 
+
 <body>
-    <div class="newsletter-main-container" style="display: flex; justify-content: center;align-items: center; width:600px; padding: 20px;  background-image: url('https://i.ibb.co/Jr3X8rQ/Websiteaaa-01.jpg');background-size: cover;background-position: center; background-repeat: no-repeat;">
-        <div class="newsletter-inner-container" style="  box-shadow: 2px 5px 5px #888888; width: 90%;padding-top:40px; border-radius: 40px; overflow: hidden; display:flex; justify-content: center;flex-direction: column;background-color:#b11519 ;">
+    <div class="newsletter-main-container">
+        <div class="newsletter-inner-container">
             <div class="news-letterimage-header">
-                <img src="https://i.ibb.co/88ZGzZC/Website-01-removebg-preview.png" alt="header-image" style="width: 96%; display: block; margin-left: auto;margin-right: auto">
+                <img src="https://i.ibb.co/88ZGzZC/Website-01-removebg-preview.png" alt="header-image" class="header-image" >
             </div>
             <div>
                 <form id="sib-form" method="POST"
                     action="https://da6fa2e3.sibforms.com/serve/MUIFABRxZCE54e4MhnWVxI6VXxOrMHw6_S9wh12Ri1S4DJmyERKPC6eIucWZIA6b38O6s0Di5wsa-GkqcQ4lKmL4p1nYG8CCobJxUpWOBxHWxmbwFtIrTk64EFLfv3R2Mji6_s7tlH6KYgDj5j8229JZvCBtIUfj2BBbFIJrK9H0Cbukaug_TtCeUcF0vOC3J2SupK2f-pl6FE14"
-                    data-type="subscription" style=" margin-top:30px;display:flex;justify-content: center; align-items: center;">
+                    data-type="subscription">
 
-                    <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
-                        placeholder="ENTER YOUR EMAIL ID" data-required="true" required style="height:38px;width: 68%;font-family: Arial, Helvetica, sans-serif;color: grey;font-weight: 500;padding: 5px 10px; font-size: 16px;border-radius: 5px;text-decoration: none;outline: none;border: 1px solid grey;border: none; "/>
+                    <input class="input-email-field" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
+                        placeholder="ENTER YOUR EMAIL ID" data-required="true" required />
 
-                    <button form="sib-form" type="submit" style=" margin-left: 10px; height: 38px; color: aliceblue;background-color: black;font-family: Arial, Helvetica, sans-serif;font-weight: 400; font-size: 17px; padding: 5px 10px; border-radius:5px;cursor:pointer; width: 100px;letter-spacing: 1px;border: none;">Submit</button>
+                    <button class="newsletter-submit-button" form="sib-form" type="submit" >Submit</button>
                 </form>
             </div>
-            <div class="newsletter-bottom-image" style="width: 100%;padding: 10px;">
-                <img src="https://i.ibb.co/n8mypLw/Website-002-03-1.png" alt="bottom-image" style="width: 100%;">
+            <div class="newsletter-bottom-image">
+                <img src="https://i.ibb.co/n8mypLw/Website-002-03-1.png" alt="bottom-image" class="bottom-image">
             </div>
         </div>
     </div>
