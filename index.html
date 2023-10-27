@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .main-container{
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .newsletter-main-container{
             margin: 0px;
             display: flex;
@@ -87,13 +93,18 @@
         }
         /* mobile view */
         @media only screen and (max-width: 479px) {
+            .main-container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
             .newsletter-main-container{
-            min-width: 300px;
-            width:100%;
+            width: 310px;
+           
           }
         .newsletter-inner-container{
             width: 95%;
-            border-radius: 2%; 
+            border-radius: 7%; 
         }
         .header-image{
             width: 90%;
@@ -102,7 +113,7 @@
             display:flex;
             justify-content: center;
             align-items: center;
-            margin: 5% 5% 0px 5%;
+            margin: 5% 4% 0px 4%;
           
         }
         .input-email-field{
@@ -114,6 +125,9 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 27px;
+            margin-left: 5px;
+            padding: 5px 12px;
+           
         }
         }
      
@@ -122,24 +136,26 @@
 
 
 <body>
-    <div class="newsletter-main-container">
-        <div class="newsletter-inner-container">
-            <div class="news-letterimage-header">
-                <img src="https://i.ibb.co/88ZGzZC/Website-01-removebg-preview.png" alt="header-image" class="header-image" >
-            </div>
-            <div>
-                <form id="sib-form" method="POST"
-                    action="https://da6fa2e3.sibforms.com/serve/MUIFABRxZCE54e4MhnWVxI6VXxOrMHw6_S9wh12Ri1S4DJmyERKPC6eIucWZIA6b38O6s0Di5wsa-GkqcQ4lKmL4p1nYG8CCobJxUpWOBxHWxmbwFtIrTk64EFLfv3R2Mji6_s7tlH6KYgDj5j8229JZvCBtIUfj2BBbFIJrK9H0Cbukaug_TtCeUcF0vOC3J2SupK2f-pl6FE14"
-                    data-type="subscription">
-
-                    <input class="input-email-field" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
-                        placeholder="ENTER YOUR EMAIL ID" data-required="true" required />
-
-                    <button class="newsletter-submit-button" form="sib-form" type="submit" >Submit</button>
-                </form>
-            </div>
-            <div class="newsletter-bottom-image">
-                <img src="https://i.ibb.co/n8mypLw/Website-002-03-1.png" alt="bottom-image" class="bottom-image">
+    <div class="main-container">
+        <div class="newsletter-main-container">
+            <div class="newsletter-inner-container">
+                <div class="news-letterimage-header">
+                    <img src="https://i.ibb.co/88ZGzZC/Website-01-removebg-preview.png" alt="header-image" class="header-image" >
+                </div>
+                <div>
+                    <form id="sib-form" method="POST"
+                        action="https://da6fa2e3.sibforms.com/serve/MUIFABRxZCE54e4MhnWVxI6VXxOrMHw6_S9wh12Ri1S4DJmyERKPC6eIucWZIA6b38O6s0Di5wsa-GkqcQ4lKmL4p1nYG8CCobJxUpWOBxHWxmbwFtIrTk64EFLfv3R2Mji6_s7tlH6KYgDj5j8229JZvCBtIUfj2BBbFIJrK9H0Cbukaug_TtCeUcF0vOC3J2SupK2f-pl6FE14"
+                        data-type="subscription">
+    
+                        <input class="input-email-field" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
+                            placeholder="ENTER YOUR EMAIL ID" data-required="true" required />
+    
+                        <button class="newsletter-submit-button" form="sib-form" type="submit" >Submit</button>
+                    </form>
+                </div>
+                <div class="newsletter-bottom-image">
+                    <img src="https://i.ibb.co/n8mypLw/Website-002-03-1.png" alt="bottom-image" class="bottom-image">
+                </div>
             </div>
         </div>
     </div>
