@@ -1,145 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* .main-container{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } */
-        /* .newsletter-main-container{
-            margin: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width:80%; 
-            padding: 5%;
-            /* background-image: url('https://i.ibb.co/Jr3X8rQ/Websiteaaa-01.jpg'); 
-            background-size: cover;
-            background-position: center; 
-            background-repeat: no-repeat;
-
-        } */
-        .newsletter-inner-container{
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.527);
-            width: 97%;
-            padding:1%;
-            border-radius: 7%;
-            overflow: hidden;
-            display:flex;
-            justify-content: center;
-            flex-direction: column;
-            margin-left: auto;
-            margin-right: auto;
-            background-color:#b11519 ;
-        }
-        .header-image{
-            width: 98%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #sib-form{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5% 5% 0px 5%;
-          
-        }
-        .input-email-field{
-            height:35px;
-            width: 75%;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 5px 3px 2px 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            outline: none;
-            border: 1px solid grey;
-            color: grey;
-            border: none; 
-            text-transform: lowercase;
-        }
-        .input-email-field::placeholder {
-            color: rgb(216, 216, 216);
-            opacity: 1;
-            font-weight: 500;
-            text-transform: capitalize;
-        }
-        .input-email-field::-ms-input-placeholder {
-            color: rgb(216, 216, 216);
-            font-weight: 500;
-            text-transform: capitalize;
-
-        }
-        .newsletter-submit-button{
-            margin-left: 10px;
-            color: aliceblue;
-            background-color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 32px;
-            padding: 5px 20px;
-            border-radius:5px;
-            cursor:pointer;
-            letter-spacing: 1px;
-            border: none;
-        }
-        .newsletter-bottom-image{
-            width: 100%;
-        }
-        .bottom-image{
-           width: 100%;
-        }
-        /* mobile view */
-        @media only screen and (max-width: 479px) {
-            /* .main-container{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-            .newsletter-main-container{
-            width: 100%;
-           
-          } */
-        .newsletter-inner-container{
-            width: 100%;
-            border-radius: 7%; 
-        }
-        .header-image{
-            width: 90%;
-        }
-        #sib-form{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5% 4% 0px 4%;
-          
-        }
-        .input-email-field{
-            height:28px; 
-            font-size: 14px; 
-            width: 100%;
-        }
-        .newsletter-submit-button{   
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 26px;
-            margin-left: 5px;
-            padding: 5px 12px;
-           
-        }
-        }
-     
-    </style>
-
-
+    <style>    
+.newsletter-inner-container{box-shadow:0 3px 10px rgba(0,0,0,0.527);width:97%;padding:1%;border-radius:7%;overflow:hidden;display:flex;justify-content:center;flex-direction:column;margin-left:auto;margin-right:auto;background-color:#b11519}
+.header-image{width:98%;display:block;margin-left:auto;margin-right:auto}
+#sib-form{display:flex;justify-content:center;align-items:center;margin:5% 5% 0px 5%}
+.input-email-field{height:35px;width:75%;font-family:Arial,Helvetica,sans-serif;padding:5px 3px 2px 10px;font-size:16px;border-radius:5px;text-decoration:none;outline:none;border:1px solid grey;color:grey;border:none;text-transform:lowercase}
+.input-email-field::placeholder{color:rgb(216,216,216);opacity:1;font-weight:500;text-transform:capitalize}
+.input-email-field::-ms-input-placeholder{color:rgb(216,216,216);font-weight:500;text-transform:capitalize}
+.newsletter-submit-button{margin-left:10px;color:aliceblue;background-color:black;font-family:Arial,Helvetica,sans-serif;font-weight:400;font-size:17px;line-height:32px;padding:5px 20px;border-radius:5px;cursor:pointer;letter-spacing:1px;border:none}
+.newsletter-bottom-image{width:100%}
+.bottom-image{width:100%}
+@media only screen and (max-width:479px){.newsletter-inner-container{width:100%;border-radius:7%}
+.header-image{width:90%}
+#sib-form{display:flex;justify-content:center;align-items:center;margin:5% 4% 0px 4%}
+.input-email-field{height:28px;font-size:14px;width:100%}
+.newsletter-submit-button{font-weight:400;font-size:14px;line-height:26px;margin-left:5px;padding:5px 12px}
+}</style>
+</head>
 <body>
     <div class="main-container">
         <div class="newsletter-main-container">
@@ -151,10 +31,8 @@
                     <form id="sib-form" method="POST"
                         action="https://da6fa2e3.sibforms.com/serve/MUIFAI9LebB-9da1uEEO0W6O0Il4iNCyvyqqps2INkL44M1sWZywPQa_nx8ro4GoeANLIwzcwIWVHan00RnAPjLN_a_wKef00zdfxya0L7YJEX2t6o4X0gSBMybU9m02N01I58COICtJcYg91yperZsJIq7z5vzomN07gBjUFxnpdDIkFm85LH2SVF8i7arasO-neSDohmoTvbgH"
                         data-type="subscription">
-    
                         <input class="input-email-field" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
                             placeholder="ENTER YOUR EMAIL ID" data-required="true" required />
-    
                         <button class="newsletter-submit-button" form="sib-form" type="submit" >Submit</button>
                     </form>
                 </div>
@@ -164,8 +42,6 @@
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
 
