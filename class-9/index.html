@@ -1,12 +1,61 @@
 <style>
-    #sib-form{font-family:'lato';width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;}#sib-form > input{width:90%;height:45px;border:2px solid rgb(39,39,39);border-radius:10px;margin-bottom:8px;color:rgb(48,48,48);padding:5px 10px 5px 15px;font-size:20px;}#sib-form > button{width:90%;height:40px;background-color:#e31d2c;border-radius:10px;font-size:20px;color:white;font-weight:500;border:none;cursor:pointer;box-shadow:2px 2px 5px #494949;}@media screen and (max-width:479px){#sib-form > input{font-size:16px;width:95%;}#sib-form > button{font-size:16px;width:95%;}}
-    </style>
-     <div>
-        <form id="sib-form" method="POST"
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+    #sib-form {
+        font-family: 'lato';
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sib-form>input {
+        font-family: 'lato';
+        width: 90%;
+        height: 45px;
+        border: 2px solid rgb(39, 39, 39);
+        border-radius: 10px;
+        margin-bottom: 8px;
+        color: rgb(48, 48, 48);
+        padding: 5px 10px 5px 15px;
+        font-size: 20px;
+    }
+
+    #sib-form>button {
+        font-family: 'lato';
+        width: 90%;
+        height: 40px;
+        background-color: #e31d2c;
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px #494949;
+    }
+
+    @media screen and (max-width:479px) {
+        #sib-form>input {
+            font-size: 16px;
+            width: 95%;
+        }
+
+        #sib-form>button {
+            font-size: 16px;
+            width: 95%;
+        }
+    }
+</style>
+<div>
+    <form id="sib-form" method="POST"
         action="https://da6fa2e3.sibforms.com/serve/MUIFALpDMARMijfcDdrJtNkCeqa96mRWkommFcEC7wFQx0pW_dG5FannXktrupL-IeZ9eLZcTSzNBlSgdM0Az0270j1AlgJR33PwLjosMJdyfPqtczu3uFpo5fqFfxSTnZe9EtZvzLM8cipN1nSz-mSDdtAvbT01OcJf9o2Z8WfR2UQwuUhsfYm4AmM8XhD3G9j92uAqVBOzGuHt"
-             data-type="subscription">
-                <input class="input-email-field" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
-                    placeholder="Enter your email address" data-required="true" autofocus required />
-                <button class="newsletter-submit-button" form="sib-form" type="submit">Submit</button>  
-            </form>
-            <p style="text-align: center; margin-top: 8px;font-size:12px;font-family:lato;">Check your email after submitting.&#x2A;</p></div>
+        data-type="subscription">
+        <input class="input-email-field" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
+            placeholder="Enter your email address" data-required="true" autofocus required />
+        <button class="newsletter-submit-button" form="sib-form" type="submit">Submit</button>
+    </form>
+    <p style="text-align: center; margin-top: 8px;font-size:12px;font-family:lato;">Check your email after
+        submitting.&#x2A;</p>
+</div>
