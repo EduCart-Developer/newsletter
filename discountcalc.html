@@ -30,20 +30,20 @@
       const desiredTotalDiscountPercentage = parseFloat(document.getElementById("desiredTotalDiscount").value);
 
       // Calculate the discounted price after the pre-existing discount
-      const discountedPrice = originalPrice * (1 - preExistingDiscountPercentage / 100);
+      const preDiscountedPrice = originalPrice * (1 - preExistingDiscountPercentage / 100);
 
       // Calculate the desired discount amount
       const desiredDiscountAmount = originalPrice * (desiredTotalDiscountPercentage / 100);
 
       // Calculate the additional discount required
-      const additionalDiscount = desiredDiscountAmount - (originalPrice - discountedPrice);
+      const additionalDiscount = desiredDiscountAmount - (originalPrice - preDiscountedPrice);
 
       // Calculate the additional discount percentage
-      const additionalDiscountPercentage = (additionalDiscount / discountedPrice) * 100;
+      const additionalDiscountPercentage = (additionalDiscount / preDiscountedPrice) * 100;
 
       // Display the result
       const resultElement = document.getElementById("result");
-      resultElement.innerHTML = `Additional discount required: ${additionalDiscount.toFixed(2)} Rs (${additionalDiscountPercentage.toFixed(2)}%)`;
+      resultElement.innerHTML = `Pre-discounted price: ${preDiscountedPrice.toFixed(2)} Rs <br> Additional discount required: ${additionalDiscount.toFixed(2)} Rs (${additionalDiscountPercentage.toFixed(2)}%)`;
     }
   </script>
 </body>
