@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Discount Calculator</title>
+</head>
+<body>
+  <h2>Total Discount Calculator</h2>
+  <form id="discountForm">
+    <label for="originalPrice">Original Price:</label>
+    <input type="number" id="originalPrice" name="originalPrice" required>
+    <br>
+    <label for="preExistingDiscount">Pre-existing Discount (%):</label>
+    <input type="number" id="preExistingDiscount" name="preExistingDiscount" required>
+    <br>
+    <label for="desiredTotalDiscount">Desired Total Discount (%):</label>
+    <input type="number" id="desiredTotalDiscount" name="desiredTotalDiscount" required>
+    <br>
+    <button type="button" onclick="calculateDiscount()">Calculate</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateDiscount() {
+      // Retrieve input values from the form
+      const originalPrice = parseFloat(document.getElementById("originalPrice").value);
+      const preExistingDiscountPercentage = parseFloat(document.getElementById("preExistingDiscount").value);
+      const desiredTotalDiscountPercentage = parseFloat(document.getElementById("desiredTotalDiscount").value);
+
+      // Calculate the discounted price after the pre-existing discount
+      const discountedPrice = originalPrice * (1 - preExistingDiscountPercentage / 100);
+
+      // Calculate the desired discount amount
+      const desiredDiscountAmount = originalPrice * (desiredTotalDiscountPercentage / 100);
+
+      // Calculate the additional discount required
+      const additionalDiscount = desiredDiscountAmount - (originalPrice - discountedPrice);
+
+      // Calculate the additional discount percentage
+      const additionalDiscountPercentage = (additionalDiscount / discountedPrice) * 100;
+
+      // Display the result
+      const resultElement = document.getElementById("result");
+      resultElement.innerHTML = `Additional discount required: ${additionalDiscount.toFixed(2)} Rs (${additionalDiscountPercentage.toFixed(2)}%)`;
+    }
+  </script>
+</body>
+</html>
