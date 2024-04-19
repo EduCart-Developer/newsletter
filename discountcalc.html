@@ -4,23 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Total Discount Calculator</title>
+<style>
+  .main-div{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    padding: 15px;
+  }
+  form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  input{
+    padding: 8px 10px;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(194, 194, 194);
+    outline: none;
+    border:1px solid #e2e2e2;
+  }
+</style>
 </head>
 <body>
-  <h2>Total Discount Calculator</h2>
+  <div class="main-div">
+    <h2>Total Discount Calculator</h2>
   <form id="discountForm">
-    <label for="originalPrice">Original Price:</label>
+    <label for="originalPrice">Original Price:</label><br>
     <input type="number" id="originalPrice" name="originalPrice" required>
     <br>
-    <label for="preExistingDiscount">Pre-existing Discount (%):</label>
+    <label for="preExistingDiscount">Pre-existing Discount (%):</label><br>
     <input type="number" id="preExistingDiscount" name="preExistingDiscount" required>
     <br>
-    <label for="desiredTotalDiscount">Desired Total Discount (%):</label>
+    <label for="desiredTotalDiscount">Desired Total Discount (%):</label><br>
     <input type="number" id="desiredTotalDiscount" name="desiredTotalDiscount" required>
     <br>
     <button type="button" onclick="calculateDiscount()">Calculate</button>
   </form>
 
   <div id="result"></div>
+  </div>
 
   <script>
     function calculateDiscount() {
